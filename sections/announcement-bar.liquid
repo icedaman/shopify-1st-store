@@ -1,9 +1,14 @@
 {%- for block in section.blocks -%}
   {%- case block.type -%}
     {%- when 'announcement' -%}
-    <div class="announce-bar" color-{{ block.settings.background-color}} aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>50% Adidas Sale on Black Friday!</div>
+    <div class="announce-bar" color-{{ block.settings.background-color}} aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
         {%- if block.settings.text != blank -%}
           {%- if block.settings.link != blank -%}
+            <a href="{{ block.settings.link }}" style="color: {{ block.settings.announcement-text-color}}"; >
+          {%- endif -%}
+            {{ block.settings.text | escape }}               
+          {%- if block.settings.link != blank -%}
+            </a>
           {%- endif -%}
         {%- endif -%}
       </div>
@@ -30,6 +35,12 @@
           "id": "background-color",
           "label": "Body text",
           "default": "#4f14b7"
+        },
+        {
+          "type": "color",
+          "id": "announcement-text-color",
+          "label": "Body text",
+          "default": "#fff"
         },
         {
           "type": "select",
