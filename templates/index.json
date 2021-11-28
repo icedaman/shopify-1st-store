@@ -134,6 +134,7 @@
       "type": "video",
       "settings": {
         "heading": "Video",
+        "cover_image": "shopify:\/\/shop_images\/download_1.jpg",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false
