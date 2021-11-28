@@ -96,6 +96,7 @@
         "video": {
           "type": "video",
           "settings": {
+            "cover_image": "shopify:\/\/shop_images\/young-boy-kicking-ball.jpg",
             "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
             "description": "Describe the video",
             "image_padding": false
