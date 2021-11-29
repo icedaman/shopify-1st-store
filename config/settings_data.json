@@ -18,7 +18,7 @@
             "settings": {
               "text": "50% Adidas Black Friday",
               "background-color": "#4f14b7",
-              "announcement-text-color": "#fff",
+              "announcement-text-color": "#ffffff",
               "color_scheme": "inverse",
               "link": "shopify:\/\/products\/adidas-classic-backpack"
             }
@@ -39,7 +39,7 @@
           "logo_width": 150,
           "logo_position": "middle-left",
           "menu": "main-menu",
-          "menu_two": "main-menu",
+          "menu_two": "main-menu-2",
           "show_line_separator": true,
           "enable_sticky_header": true
         }
