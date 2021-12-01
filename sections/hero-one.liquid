@@ -1,0 +1,154 @@
+<div class="hero hero1 hero1--aligned-{{ section.settings.info_alignment }}">
+  {%- if section.settings.image != blank -%}
+    <img
+      srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+        {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+        {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | img_url: '535x' }} 535w,{%- endif -%}
+        {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | img_url: '750x' }} 750w,{%- endif -%}
+        {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | img_url: '1070x' }} 1070w,{%- endif -%}
+        {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
+        {{ section.settings.image | img_url: 'master' }} {{ section.settings.image.width }}w"
+      src="{{ section.settings.image | img_url: '1500x' }}"
+      sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+      alt="{{ section.settings.image.alt | escape }}"
+      loading="lazy"
+      width="{{ section.settings.image.width }}"
+      height="{{ section.settings.image.height }}"
+      class="hero1__bg"
+    >
+  {%- else -%}
+    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+  {%- endif -%}
+  {% assign opacity = section.settings.opacity | divided_by: 100.00 %}
+  <div class="hero1__content-container" style="background-color: {{ section.settings.background_color | color_modify: 'alpha', opacity}}">
+    <div class="hero1__info">
+      {%- for block in section.blocks -%}
+        {% case block.type %}
+          {%- when 'heading' -%}
+            <h1 class="hero1__title" {{ block.shopify_attributes }}>{{ block.settings.title | escape }}</h1>
+          {%- when 'paragraph' -%}
+            <p class="hero1__paragraph" {{ block.shopify_attributes }}>{{ block.settings.paragraph | escape }}</p>
+          {%- when 'button' -%}
+            {%- if block.settings.button_label != blank -%}
+              <a href="{{ block.settings.button_link }}" class="hero1__button" {{ block.shopify_attributes }}>
+                {{ block.settings.button_label | escape }}
+              </a>
+            {%- endif -%}
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+  <h1>Hero 1</h1>
+</div>
+
+{% schema %}
+{
+  "name": "Hero One",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-with-text.settings.image.label"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "label": "Opacity",
+      "default": 50
+    },          
+    {
+      "type": "select",
+      "id": "info_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Info Alignment"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.image-with-text.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Title"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "name": "Paragraph",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "paragraph",
+          "label": "Paragraph",
+          "default": "Message Example: I©m baby tbh bushwick plaid try-hard skateboard leggings, scenester pop-up kale chips next level poke poutine helvetica jianbing. I©m baby tbh bushwick plaid try-hard"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "t:sections.image-with-text.blocks.button.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+          "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "View More"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero One",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
