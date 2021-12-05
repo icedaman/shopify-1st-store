@@ -1,4 +1,4 @@
-<div class="hero hero1 hero1--aligned-{{ section.settings.info_alignment }}">
+<div class="hero hero1 hero1--aligned-{{ section.settings.info_alignment }} hero1--{{ section.settings.hero_height }}">
   {%- if section.settings.image != blank -%}
     <img
       srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
@@ -25,7 +25,7 @@
       {%- for block in section.blocks -%}
         {% case block.type %}
           {%- when 'heading' -%}
-            <h1 class="hero1__title" {{ block.shopify_attributes }}>{{ block.settings.title | escape }}</h1>
+            <h1 class="hero1__title hero1--{{- block.settings.title_size -}}" {{ block.shopify_attributes }}>{{ block.settings.title | escape }}</h1>
           {%- when 'paragraph' -%}
             <p class="hero1__paragraph" {{ block.shopify_attributes }}>{{ block.settings.paragraph | escape }}</p>
           {%- when 'button' -%}
@@ -46,6 +46,30 @@
   "name": "Hero One",
   "class": "spaced-section spaced-section--full-width",
   "settings": [
+    {
+      "type": "select",
+      "id": "hero_height",
+      "options": [
+        {
+          "value": "25vh",
+          "label": "25%"
+        },
+        {
+          "value": "50vh",
+          "label": "50%"
+        },
+        {
+          "value": "75vh",
+          "label": "75%"
+        },
+        {
+          "value": "100vh",
+          "label": "100%"
+        }
+      ],
+      "default": "100vh",
+      "label": "Height"
+    },
     {
       "type": "image_picker",
       "id": "image",
@@ -98,6 +122,30 @@
           "id": "title",
           "label": "Title",
           "default": "Title"
+        },
+        {
+          "type": "select",
+          "id": "title_size",
+          "options": [
+            {
+              "value": "sm",
+              "label": "Small"
+            },
+            {
+              "value": "md",
+              "label": "Medium"
+            },
+            {
+              "value": "lg",
+              "label": "Large"
+            },
+            {
+              "value": "xl",
+              "label": "Extra Large"
+            }
+          ],
+          "default": "md",
+          "label": "Font Size"
         }
       ]
     },

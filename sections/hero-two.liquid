@@ -1,4 +1,4 @@
-<div class="hero hero2">
+<div class="hero hero2 hero2--{{ section.settings.hero_height }}">
   <div class="hero2__collection1">
     {%- if section.settings.image1 != blank -%}
       <img
@@ -70,6 +70,30 @@
   "name": "Hero Two",
   "class": "spaced-section spaced-section--full-width",
   "settings": [
+    {
+      "type": "select",
+      "id": "hero_height",
+      "options": [
+        {
+          "value": "25vh",
+          "label": "25%"
+        },
+        {
+          "value": "50vh",
+          "label": "50%"
+        },
+        {
+          "value": "75vh",
+          "label": "75%"
+        },
+        {
+          "value": "100vh",
+          "label": "100%"
+        }
+      ],
+      "default": "100vh",
+      "label": "Height"
+    },
     {
       "type": "text",
       "id": "button_label1",
