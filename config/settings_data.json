@@ -63,11 +63,27 @@
               "heading": "Heading",
               "subtext": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
             }
+          },
+          "8b70a7a5-85f4-4f06-8179-363b39dad72b": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "main-menu"
+            }
+          },
+          "a2be4d70-2286-4911-aac8-580d790670c4": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Collections",
+              "menu": "main-menu-2"
+            }
           }
         },
         "block_order": [
           "footer-0",
-          "footer-1"
+          "footer-1",
+          "8b70a7a5-85f4-4f06-8179-363b39dad72b",
+          "a2be4d70-2286-4911-aac8-580d790670c4"
         ],
         "settings": {
           "footer_p": "Subscribe to our store to receive the most recent news and promotions.",
