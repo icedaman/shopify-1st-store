@@ -89,7 +89,7 @@
         "xl_col": "col-xl-4",
         "xxl_col": "col-xxl-4",
         "image_fit": "contain",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "opacity": 100,
         "show_name": true
       }
