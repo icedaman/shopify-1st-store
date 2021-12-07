@@ -9,6 +9,11 @@
     "colors_background_2": "#F3F3F3",
     "type_header_font": "assistant_n4",
     "type_body_font": "assistant_n4",
+    "social_twitter_link": "https:\/\/twitter.com\/shopify",
+    "social_facebook_link": "https:\/\/facebook.com\/shopify",
+    "social_instagram_link": "http:\/\/instagram.com\/shopify  Twitter",
+    "social_tiktok_link": "https:\/\/tiktok.com\/@shopify",
+    "social_snapchat_link": "https:\/\/www.snapchat.com\/add\/shopify",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -66,13 +71,11 @@
           "footer-1"
         ],
         "settings": {
-          "color_scheme": "background-1",
+          "footer_p": "Subscribe to our store to receive the most recent news and promotions.",
           "newsletter_enable": true,
           "newsletter_heading": "Subscribe to our emails",
-          "show_social": false,
-          "enable_country_selector": true,
-          "enable_language_selector": true,
-          "payment_enable": true
+          "show_social": true,
+          "footer_bottom_menu": ""
         }
       }
     },
