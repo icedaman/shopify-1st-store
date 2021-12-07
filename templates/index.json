@@ -119,7 +119,7 @@
       "settings": {
         "collection": "men",
         "container_shape": "circle",
-        "container_background_color": "#f50e0e",
+        "container_background_color": "#ba8383",
         "container_opacity": 86,
         "total_products": 8,
         "sm_col": "col-sm-3",
