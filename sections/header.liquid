@@ -109,8 +109,8 @@
         {%- endif -%}
       </ul>
       <ul class="header2__collections-nav">
-        {%- if section.settings.menu != blank -%}
-          {%- for link in section.settings.menu.links -%}
+        {%- if section.settings.menu_two != blank -%}
+          {%- for link in section.settings.menu_two.links -%}
             {%- if link.links == blank -%}
               <li class="header2__collection-link">
                 <a href={{ link.url }}>{{ link.title | escape }} </a>

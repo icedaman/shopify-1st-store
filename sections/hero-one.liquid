@@ -20,14 +20,14 @@
     {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
   {%- endif -%}
   {% assign opacity = section.settings.opacity | divided_by: 100.00 %}
-  <div class="hero1__content-container" style="background-color: {{ section.settings.background_color | color_modify: 'alpha', opacity}}">
-    <div class="hero1__info">
+  <div class="hero1__content-container" style="background-color: {{ section.settings.background_color | color_modify: 'alpha', opacity}};">
+    <div class="hero1__info" style="color: {{ section.settings.text_color }}">
       {%- for block in section.blocks -%}
         {% case block.type %}
           {%- when 'heading' -%}
-            <h1 class="hero1__title hero1--{{- block.settings.title_size -}}" {{ block.shopify_attributes }}>{{ block.settings.title | escape }}</h1>
+            <h1 class="hero1__title hero1--{{- block.settings.title_size -}}" {{ block.shopify_attributes }} style="color: {{ section.settings.text_color }}"> {{ block.settings.title | escape }}</h1>
           {%- when 'paragraph' -%}
-            <p class="hero1__paragraph" {{ block.shopify_attributes }}>{{ block.settings.paragraph | escape }}</p>
+            <p class="hero1__paragraph" {{ block.shopify_attributes }} style="color: {{ section.settings.text_color }}"> {{ block.settings.paragraph | escape }}</p>
           {%- when 'button' -%}
             {%- if block.settings.button_label != blank -%}
               <a href="{{ block.settings.button_link }}" class="hero1__button" {{ block.shopify_attributes }}>
@@ -89,6 +89,12 @@
       "step": 1,
       "label": "Opacity",
       "default": 50
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text  Color",
+      "default": "#FFFFFF"
     },          
     {
       "type": "select",

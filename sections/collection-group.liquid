@@ -1,4 +1,5 @@
-<div class="collection collection1">
+{% assign opacity0 = section.settings.container_opacity | divided_by: 100.00 %}
+<div class="collection collection1" style="background-color: {{ section.settings.container_background_color | color_modify: 'alpha', opacity0 }}">
   <div class="container">
     <div class="row">
       {%- for block in section.blocks -%}
@@ -31,7 +32,7 @@
             <div class="collection1__product-info">
               <div class="collection1__product-details" style="width: 100%; text-align: center;">
                 {%- if section.settings.show_name != blank -%}
-                  <span class="collection1__product-title">
+                  <span class="collection1__product-title" style="color: {{ section.settings.text_color }}">
                     {{ block.settings.collection.title }}
                   </span>
                 {%- endif -%}
@@ -73,6 +74,21 @@
       ],
       "default": "circle"
     },
+    {
+      "type": "color",
+      "id": "container_background_color",
+      "label": "Container Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "container_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "label": "Container Color Opacity",
+      "default": 50
+    },  
     {
       "type": "select",
       "id": "sm_col",
@@ -229,6 +245,12 @@
       "id": "show_name",
       "label": "Show Name",
       "default": true
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text  Color",
+      "default": "#000000"
     }
   ],
   "blocks": [
