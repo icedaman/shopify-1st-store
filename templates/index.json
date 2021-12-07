@@ -114,6 +114,46 @@
         "opacity2": 40
       }
     },
+    "1638899610beb65313": {
+      "type": "hero-one",
+      "blocks": {
+        "1638899610b3f9ef61-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Footwear",
+            "title_size": "lg"
+          }
+        },
+        "1638899610b3f9ef61-1": {
+          "type": "paragraph",
+          "disabled": true,
+          "settings": {
+            "paragraph": "Message Example: I©m baby tbh bushwick plaid try-hard skateboard leggings, scenester pop-up kale chips next level poke poutine helvetica jianbing. I©m baby tbh bushwick plaid try-hard"
+          }
+        },
+        "1638899610b3f9ef61-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1638899610b3f9ef61-0",
+        "1638899610b3f9ef61-1",
+        "1638899610b3f9ef61-2"
+      ],
+      "settings": {
+        "hero_height": "25vh",
+        "image": "shopify:\/\/shop_images\/close-up-of-person-tying-their-shoe.jpg",
+        "background_color": "#121212",
+        "opacity": 15,
+        "text_color": "#f3f3f3",
+        "info_alignment": "right"
+      }
+    },
     "16388904557f6e6768": {
       "type": "collection-products-1",
       "settings": {
@@ -200,6 +240,7 @@
     "16388896688ca78b81",
     "1638890119b237c7f6",
     "1638890387a41e9a16",
+    "1638899610beb65313",
     "16388904557f6e6768",
     "163889451394c0bbd2",
     "16388973371de55dfd"
