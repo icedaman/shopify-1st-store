@@ -46,7 +46,8 @@
         "1638889668cd8a8795-2"
       ],
       "settings": {
-        "hero_height": "100vh",
+        "hero_height": "25vh",
+        "image": "shopify:\/\/shop_images\/crowd-watching-pink-fireworks-erupting-into-clouds-of-purple.jpg",
         "background_color": "#000000",
         "opacity": 55,
         "info_alignment": "center"
