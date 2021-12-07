@@ -55,6 +55,22 @@
         "info_alignment": "left"
       }
     },
+    "1638890387a41e9a16": {
+      "type": "hero-two",
+      "settings": {
+        "hero_height": "50vh",
+        "button_label1": "Women",
+        "button_link1": "shopify:\/\/collections\/women",
+        "image1": "shopify:\/\/shop_images\/smiling-woman-at-carnival.jpg",
+        "background_color1": "#b78d06",
+        "opacity1": 33,
+        "button_label2": "Men",
+        "button_link2": "shopify:\/\/collections\/men",
+        "image2": "shopify:\/\/shop_images\/mens-fashion-stonewash-jeans-and-boots.jpg",
+        "background_color2": "#2bb5c2",
+        "opacity2": 40
+      }
+    },
     "1638890119b237c7f6": {
       "type": "collection-group",
       "blocks": {
@@ -96,22 +112,6 @@
         "opacity": 100,
         "show_name": true,
         "text_color": "#fafafa"
-      }
-    },
-    "1638890387a41e9a16": {
-      "type": "hero-two",
-      "settings": {
-        "hero_height": "50vh",
-        "button_label1": "Women",
-        "button_link1": "shopify:\/\/collections\/women",
-        "image1": "shopify:\/\/shop_images\/smiling-woman-at-carnival.jpg",
-        "background_color1": "#b78d06",
-        "opacity1": 33,
-        "button_label2": "Men",
-        "button_link2": "shopify:\/\/collections\/men",
-        "image2": "shopify:\/\/shop_images\/mens-fashion-stonewash-jeans-and-boots.jpg",
-        "background_color2": "#2bb5c2",
-        "opacity2": 40
       }
     },
     "1638899610beb65313": {
@@ -238,8 +238,8 @@
   "order": [
     "16388897273a88f266",
     "16388896688ca78b81",
-    "1638890119b237c7f6",
     "1638890387a41e9a16",
+    "1638890119b237c7f6",
     "1638899610beb65313",
     "16388904557f6e6768",
     "163889451394c0bbd2",
