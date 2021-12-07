@@ -51,7 +51,6 @@
         "blocks": {
           "footer-0": {
             "type": "link_list",
-            "disabled": true,
             "settings": {
               "heading": "Quick links",
               "menu": "footer"
