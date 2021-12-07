@@ -84,8 +84,8 @@
       ],
       "settings": {
         "container_shape": "square",
-        "container_background_color": "#FFFFFF",
-        "container_opacity": 50,
+        "container_background_color": "#19a8d1",
+        "container_opacity": 53,
         "sm_col": "col-sm-6",
         "md_col": "col-md-4",
         "lg_col": "col-lg-4",
@@ -95,7 +95,7 @@
         "background_color": "#ffffff",
         "opacity": 100,
         "show_name": true,
-        "text_color": "#000000"
+        "text_color": "#ffffff"
       }
     },
     "1638890387a41e9a16": {
