@@ -134,6 +134,44 @@
         "show_price": false,
         "text_color": "#ffffff"
       }
+    },
+    "163889451394c0bbd2": {
+      "type": "hero-one",
+      "blocks": {
+        "1638894513f10aa0b2-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Title",
+            "title_size": "md"
+          }
+        },
+        "1638894513f10aa0b2-1": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "Message Example: I©m baby tbh bushwick plaid try-hard skateboard leggings, scenester pop-up kale chips next level poke poutine helvetica jianbing. I©m baby tbh bushwick plaid try-hard"
+          }
+        },
+        "1638894513f10aa0b2-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1638894513f10aa0b2-0",
+        "1638894513f10aa0b2-1",
+        "1638894513f10aa0b2-2"
+      ],
+      "settings": {
+        "hero_height": "75vh",
+        "image": "shopify:\/\/shop_images\/woman-in-a-floral-dress-surrounded-by-sunflowers.jpg",
+        "background_color": "#e0ff02",
+        "opacity": 18,
+        "text_color": "#bed451",
+        "info_alignment": "left"
+      }
     }
   },
   "order": [
@@ -141,6 +179,7 @@
     "16388896688ca78b81",
     "1638890119b237c7f6",
     "1638890387a41e9a16",
-    "16388904557f6e6768"
+    "16388904557f6e6768",
+    "163889451394c0bbd2"
   ]
 }
