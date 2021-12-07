@@ -82,7 +82,7 @@
         "1638890119f3245a1a-2"
       ],
       "settings": {
-        "container_shape": "square",
+        "container_shape": "circle",
         "sm_col": "col-sm-6",
         "md_col": "col-md-4",
         "lg_col": "col-lg-4",
@@ -90,7 +90,7 @@
         "xxl_col": "col-xxl-4",
         "image_fit": "contain",
         "background_color": "#FFFFFF",
-        "opacity": 50,
+        "opacity": 100,
         "show_name": true
       }
     },
