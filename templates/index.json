@@ -51,7 +51,7 @@
         "image": "shopify:\/\/shop_images\/crowd-watching-pink-fireworks-erupting-into-clouds-of-purple.jpg",
         "background_color": "#000000",
         "opacity": 15,
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "info_alignment": "left"
       }
     },
@@ -128,7 +128,7 @@
         "xl_col": "col-xl-3",
         "xxl_col": "col-xxl-3",
         "image_fit": "contain",
-        "square_background_color": "#FFFFFF",
+        "square_background_color": "#ffffff",
         "square_opacity": 100,
         "show_name": true,
         "show_price": false,
@@ -172,6 +172,27 @@
         "text_color": "#8ca21b",
         "info_alignment": "left"
       }
+    },
+    "16388973371de55dfd": {
+      "type": "collection-products-2",
+      "settings": {
+        "collection": "dresses",
+        "container_shape": "rectangle",
+        "container_background_color": "#611f1f",
+        "container_opacity": 50,
+        "total_products": 8,
+        "sm_col": "col-sm-3",
+        "md_col": "col-md-3",
+        "lg_col": "col-lg-3",
+        "xl_col": "col-xl-3",
+        "xxl_col": "col-xxl-3",
+        "image_fit": "contain",
+        "square_background_color": "#b41b1b",
+        "square_opacity": 50,
+        "show_name": true,
+        "show_price": true,
+        "text_color": "#ffffff"
+      }
     }
   },
   "order": [
@@ -180,6 +201,7 @@
     "1638890119b237c7f6",
     "1638890387a41e9a16",
     "16388904557f6e6768",
-    "163889451394c0bbd2"
+    "163889451394c0bbd2",
+    "16388973371de55dfd"
   ]
 }
