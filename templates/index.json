@@ -28,6 +28,7 @@
         },
         "1638889668cd8a8795-1": {
           "type": "paragraph",
+          "disabled": true,
           "settings": {
             "paragraph": ""
           }
@@ -35,8 +36,8 @@
         "1638889668cd8a8795-2": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": ""
+            "button_label": "View More",
+            "button_link": "shopify:\/\/collections\/all"
           }
         }
       },
