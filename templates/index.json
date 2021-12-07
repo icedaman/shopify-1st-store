@@ -119,9 +119,9 @@
       "settings": {
         "collection": "men",
         "container_shape": "circle",
-        "container_background_color": "#FFFFFF",
-        "container_opacity": 50,
-        "total_products": 10,
+        "container_background_color": "#f50e0e",
+        "container_opacity": 86,
+        "total_products": 8,
         "sm_col": "col-sm-3",
         "md_col": "col-md-3",
         "lg_col": "col-lg-3",
@@ -129,10 +129,10 @@
         "xxl_col": "col-xxl-3",
         "image_fit": "contain",
         "square_background_color": "#FFFFFF",
-        "square_opacity": 50,
+        "square_opacity": 100,
         "show_name": true,
-        "show_price": true,
-        "text_color": "#000000"
+        "show_price": false,
+        "text_color": "#ffffff"
       }
     }
   },
