@@ -1,0 +1,272 @@
+<div class="collection collection1">
+  <div class="container">
+    <div class="row">
+      {%- for block in section.blocks -%}
+        <div class="{{ section.settings.sm_col }} {{ section.settings.md_col }} {{ section.settings.lg_col }} {{ section.settings.xl_col }} {{ section.settings.xxl_col }}">
+          <div class="collection1__collection-item">
+            {% assign opacity = section.settings.opacity | divided_by: 100.00 %}
+            <div class="collection1__product-img collection1__product-img--{{ section.settings.image_fit }} collection1__product-img--{{ section.settings.container_shape }}" style="background-color: {{ section.settings.background_color | color_modify: 'alpha', opacity}}">
+              {%- if block.settings.collection.image != blank -%}
+                <a href="{{ block.settings.collection.url }}" class="collection1__product-img collection1__product-img--img-link">
+                  <img
+                    srcset="{%- if block.settings.collection.image.width >= 165 -%}{{ block.settings.collection.image | img_url: '165x' }} 165w,{%- endif -%}
+                      {%- if block.settings.collection.image.width >= 360 -%}{{ block.settings.collection.image | img_url: '360x' }} 360w,{%- endif -%}
+                      {%- if block.settings.collection.image.width >= 535 -%}{{ block.settings.collection.image | img_url: '535x' }} 535w,{%- endif -%}
+                      {%- if block.settings.collection.image.width >= 750 -%}{{ block.settings.collection.image | img_url: '750x' }} 750w,{%- endif -%}
+                      {%- if block.settings.collection.image.width >= 1070 -%}{{ block.settings.collection.image | img_url: '1070x' }} 1070w,{%- endif -%}
+                      {%- if block.settings.collection.image.width >= 1500 -%}{{ block.settings.collection.image | img_url: '1500x' }} 1500w,{%- endif -%}
+                      {{ block.settings.collection.image | img_url: 'master' }} {{ block.settings.collection.image.width }}w"
+                    src="{{ block.settings.collection.image | img_url: '1500x' }}"
+                    sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                    alt="{{ block.settings.collection.image.alt | escape }}"
+                    loading="lazy"
+                    width="{{ block.settings.collection.image.width }}"
+                    height="{{ block.settings.collection.image.height }}"
+                  >
+                </a>  
+              {%- else -%}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+            </div>
+            <div class="collection1__product-info">
+              <div class="collection1__product-details" style="width: 100%; text-align: center;">
+                {%- if section.settings.show_name != blank -%}
+                  <span class="collection1__product-title">
+                    {{ block.settings.collection.title }}
+                  </span>
+                {%- endif -%}
+              </div>
+              <div class="collection1__product-colors">
+                <div class="collection1__product-color product-color1"></div>
+                <div class="collection1__product-color product-color2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection Group",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "select",
+      "id": "container_shape",
+      "label": "Product Container Shape",
+      "options": [
+        {
+          "value": "circle",
+          "label": "Circle"
+        },
+        {
+          "value": "square",
+          "label": "Square"
+        },
+        {
+          "value": "rectangle",
+          "label": "Rectangle"
+        }
+      ],
+      "default": "circle"
+    },
+    {
+      "type": "select",
+      "id": "sm_col",
+      "label": "Small Devices",
+      "options": [
+        {
+          "value": "col-sm-6",
+          "label": "2 Columns"
+        },
+        {
+          "value": "col-sm-4",
+          "label": "3 Columns"
+        },
+        {
+          "value": "col-sm-3",
+          "label": "4 Columns"
+        },
+        {
+          "value": "col-sm-2",
+          "label": "6 Columns"
+        }
+      ],
+      "default": "col-sm-3"
+    },
+    {
+      "type": "select",
+      "id": "md_col",
+      "label": "Medium Devices",
+      "options": [
+        {
+          "value": "col-md-6",
+          "label": "2 Columns"
+        },
+        {
+          "value": "col-md-4",
+          "label": "3 Columns"
+        },
+        {
+          "value": "col-md-3",
+          "label": "4 Columns"
+        },
+        {
+          "value": "col-md-2",
+          "label": "6 Columns"
+        }
+      ],
+      "default": "col-md-3"
+    },
+    {
+      "type": "select",
+      "id": "lg_col",
+      "label": "Large Devices",
+      "options": [
+        {
+          "value": "col-lg-6",
+          "label": "2 Columns"
+        },
+        {
+          "value": "col-lg-4",
+          "label": "3 Columns"
+        },
+        {
+          "value": "col-lg-3",
+          "label": "4 Columns"
+        },
+        {
+          "value": "col-lg-2",
+          "label": "6 Columns"
+        }
+      ],
+      "default": "col-lg-3"
+    },
+    {
+      "type": "select",
+      "id": "xl_col",
+      "label": "Extra Large Devices",
+      "options": [
+        {
+          "value": "col-xl-6",
+          "label": "2 Columns"
+        },
+        {
+          "value": "col-xl-4",
+          "label": "3 Columns"
+        },
+        {
+          "value": "col-xl-3",
+          "label": "4 Columns"
+        },
+        {
+          "value": "col-xl-2",
+          "label": "6 Columns"
+        }
+      ],
+      "default": "col-xl-3"
+    },
+    {
+      "type": "select",
+      "id": "xxl_col",
+      "label": "Extra Extra Large Devices",
+      "options": [
+        {
+          "value": "col-xxl-6",
+          "label": "2 Columns"
+        },
+        {
+          "value": "col-xxl-4",
+          "label": "3 Columns"
+        },
+        {
+          "value": "col-xxl-3",
+          "label": "4 Columns"
+        },
+        {
+          "value": "col-xxl-2",
+          "label": "6 Columns"
+        }
+      ],
+      "default": "col-xxl-3"
+    },
+    {
+      "type": "select",
+      "id": "image_fit",
+      "options": [
+        {
+          "value": "contain",
+          "label": "Contain"
+        },
+        {
+          "value": "cover",
+          "label": "Cover"
+        }
+      ],
+      "default": "contain",
+      "label": "Product Image Display Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "label": "Color Opacity",
+      "default": 50
+    },   
+    {
+      "type": "checkbox",
+      "id": "show_name",
+      "label": "Show Name",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "featured_collection",
+      "name": "t:sections.collection-list.blocks.featured_collection.name",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Group",
+      "settings": {
+        "xxl_col": "col-xxl-4", 
+        "xl_col": "col-xl-4", 
+        "lg_col": "col-lg-4", 
+        "md_col": "col-md-4", 
+        "sm_col": "col-sm-6" ,
+        "container_shape": "square"
+      },
+      "blocks": [
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
