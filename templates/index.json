@@ -50,8 +50,9 @@
         "hero_height": "25vh",
         "image": "shopify:\/\/shop_images\/crowd-watching-pink-fireworks-erupting-into-clouds-of-purple.jpg",
         "background_color": "#000000",
-        "opacity": 55,
-        "info_alignment": "center"
+        "opacity": 15,
+        "text_color": "#FFFFFF",
+        "info_alignment": "left"
       }
     },
     "1638890119b237c7f6": {
@@ -83,6 +84,8 @@
       ],
       "settings": {
         "container_shape": "square",
+        "container_background_color": "#FFFFFF",
+        "container_opacity": 50,
         "sm_col": "col-sm-6",
         "md_col": "col-md-4",
         "lg_col": "col-lg-4",
@@ -91,7 +94,8 @@
         "image_fit": "contain",
         "background_color": "#ffffff",
         "opacity": 100,
-        "show_name": true
+        "show_name": true,
+        "text_color": "#000000"
       }
     },
     "1638890387a41e9a16": {
@@ -115,17 +119,20 @@
       "settings": {
         "collection": "men",
         "container_shape": "circle",
+        "container_background_color": "#FFFFFF",
+        "container_opacity": 50,
+        "total_products": 10,
         "sm_col": "col-sm-3",
         "md_col": "col-md-3",
         "lg_col": "col-lg-3",
         "xl_col": "col-xl-3",
         "xxl_col": "col-xxl-3",
         "image_fit": "contain",
-        "background_color": "#ffffff",
-        "opacity": 100,
-        "total_products": 10,
+        "square_background_color": "#FFFFFF",
+        "square_opacity": 50,
         "show_name": true,
-        "show_price": true
+        "show_price": true,
+        "text_color": "#000000"
       }
     }
   },
