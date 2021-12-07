@@ -52,16 +52,8 @@
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
+              "heading": "Can't find it?",
               "menu": "footer"
-            }
-          },
-          "footer-1": {
-            "type": "text",
-            "disabled": true,
-            "settings": {
-              "heading": "Heading",
-              "subtext": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
             }
           },
           "8b70a7a5-85f4-4f06-8179-363b39dad72b": {
@@ -81,7 +73,6 @@
         },
         "block_order": [
           "footer-0",
-          "footer-1",
           "8b70a7a5-85f4-4f06-8179-363b39dad72b",
           "a2be4d70-2286-4911-aac8-580d790670c4"
         ],
