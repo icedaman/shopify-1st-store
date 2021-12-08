@@ -213,25 +213,21 @@
         "info_alignment": "left"
       }
     },
-    "16388973371de55dfd": {
+    "1638924513eab19063": {
       "type": "collection-products-2",
       "settings": {
         "collection": "dresses",
-        "container_shape": "rectangle",
-        "container_background_color": "#611f1f",
-        "container_opacity": 50,
+        "container_background_color": "#e0ff02",
+        "container_opacity": 37,
         "total_products": 8,
-        "sm_col": "col-sm-3",
-        "md_col": "col-md-3",
+        "sm_col": "col-sm-6",
+        "md_col": "col-md-4",
         "lg_col": "col-lg-3",
         "xl_col": "col-xl-3",
         "xxl_col": "col-xxl-3",
-        "image_fit": "contain",
-        "square_background_color": "#b41b1b",
-        "square_opacity": 50,
         "show_name": true,
         "show_price": true,
-        "text_color": "#ffffff"
+        "text_color": "#000000"
       }
     }
   },
@@ -243,6 +239,6 @@
     "1638899610beb65313",
     "16388904557f6e6768",
     "163889451394c0bbd2",
-    "16388973371de55dfd"
+    "1638924513eab19063"
   ]
 }
