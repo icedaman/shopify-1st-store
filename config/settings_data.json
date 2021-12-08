@@ -41,7 +41,7 @@
         "settings": {
           "header_type": "header1",
           "logo": "shopify:\/\/shop_images\/download_1.png",
-          "logo_width": 150,
+          "logo_width": 110,
           "menu": "main-menu",
           "menu_two": "main-menu-2"
         }
