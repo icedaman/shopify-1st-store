@@ -1,6 +1,6 @@
 {% case section.settings.header_type %}
   {% when 'header1' %}
-    <header class="header header2">
+    <header class="header header2" style="background-color: #000;min-height: 100px;padding: 0; margin: 0 auto;">
       <ul class="header2__collections-nav">
         {%- if section.settings.menu != blank -%}
           {%- for link in section.settings.menu.links -%}
@@ -223,7 +223,7 @@
     {
       "type": "range",
       "id": "logo_width",
-      "min": 50,
+      "min": 70,
       "max": 250,
       "step": 10,
       "default": 100,
