@@ -217,8 +217,8 @@
       "type": "collection-products-2",
       "settings": {
         "collection": "dresses",
-        "container_background_color": "#e0ff02",
-        "container_opacity": 37,
+        "container_background_color": "#ede87b",
+        "container_opacity": 81,
         "total_products": 8,
         "sm_col": "col-sm-6",
         "md_col": "col-md-4",
