@@ -6,12 +6,14 @@
         "vendor": {
           "type": "text",
           "settings": {
-            "text_style": "uppercase",
-            "text": "{{ product.vendor }}"
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
           }
         },
         "title": {
-          "type": "title"
+          "type": "title",
+          "settings": {
+          }
         },
         "subtitle": {
           "type": "text",
@@ -21,16 +23,25 @@
           }
         },
         "price": {
-          "type": "price"
+          "type": "price",
+          "settings": {
+          }
         },
         "quantity_selector": {
-          "type": "quantity_selector"
+          "type": "quantity_selector",
+          "settings": {
+          }
         },
         "buy_buttons": {
-          "type": "buy_buttons"
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
         },
         "description": {
-          "type": "description"
+          "type": "description",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -41,13 +52,40 @@
         "quantity_selector",
         "buy_buttons",
         "description"
-      ]
-    },
-    "product-recommendations": {
-      "type": "product-recommendations"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "hide_variants": false,
+        "enable_video_looping": false
+      }
     },
     "hero-two": {
-      "type": "hero-two"
+      "type": "hero-two",
+      "settings": {
+        "hero_height": "25vh",
+        "button_label1": "Adidas",
+        "button_link1": "shopify:\/\/collections\/adidas",
+        "image1": "shopify:\/\/shop_images\/led-sneakers.jpg",
+        "background_color1": "#000000",
+        "opacity1": 50,
+        "button_label2": "Nike",
+        "button_link2": "shopify:\/\/collections\/nike",
+        "image2": "shopify:\/\/shop_images\/sneakers-and-leggings.jpg",
+        "background_color2": "#000000",
+        "opacity2": 50
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
     }
   },
   "order": [
