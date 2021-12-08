@@ -3,13 +3,6 @@
     "main": {
       "type": "main-product-alternate",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text_style": "uppercase",
-            "text": "{{ product.vendor }}"
-          }
-        },
         "title": {
           "type": "title"
         },
@@ -34,7 +27,6 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "subtitle",
         "price",
