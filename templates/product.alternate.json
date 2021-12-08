@@ -1,0 +1,58 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product-alternate",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text_style": "uppercase",
+            "text": "{{ product.vendor }}"
+          }
+        },
+        "title": {
+          "type": "title"
+        },
+        "subtitle": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "price": {
+          "type": "price"
+        },
+        "quantity_selector": {
+          "type": "quantity_selector"
+        },
+        "buy_buttons": {
+          "type": "buy_buttons"
+        },
+        "description": {
+          "type": "description"
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "subtitle",
+        "price",
+        "quantity_selector",
+        "buy_buttons",
+        "description"
+      ]
+    },
+    "product-recommendations": {
+      "type": "product-recommendations"
+    },
+    "hero-two": {
+      "type": "hero-two"
+    }
+  },
+  "order": [
+    "main",
+    "hero-two",
+    "product-recommendations"
+  ]
+}
