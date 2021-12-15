@@ -70,8 +70,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 100px;
   margin: 0 auto;
+  max-width: fit-content;
 }
 .header1__icons {
   display: inline-block;
