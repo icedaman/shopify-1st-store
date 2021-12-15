@@ -1,15 +1,16 @@
 {% case section.settings.header_type %}
   {% when 'header1' %}
-    <header class="header header2" style="background-color: #000;min-height: 100px;padding: 0; margin: 0 auto;">
-      <ul class="header2__collections-nav">
+  {{ 'Header1.css' | asset_url | stylesheet_tag }}
+    <header class="header header1" style="color:azure;background-color: #000;min-height: 100px;padding: 0; margin: 0 auto;">
+      <ul class="header1__collections-nav">
         {%- if section.settings.menu != blank -%}
           {%- for link in section.settings.menu.links -%}
             {%- if link.links == blank -%}
-              <li class="header2__collection-link">
+              <li class="header1__collection-link">
                 <a href={{ link.url }}>{{ link.title | escape }}</a>
               </li>
             {%- else -%}
-             <li class="header2__collection-link">
+             <li class="header1__collection-link">
                 <a href={{ link.url }}>{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
                 <ul class="collection-link-sub-links">
                   {%- for childlink in link.links -%}
@@ -21,7 +22,7 @@
           {%- endfor -%}
         {%- endif -%}
       </ul>
-       <div class="header2__logo">
+       <div class="header1__logo">
         <a href="{{ routes.root_url }}">
            {%- if section.settings.logo != blank -%}
             {%- assign image_size = section.settings.logo_width | append: 'x' -%}
@@ -38,15 +39,15 @@
           {%- endif -%}
         </a>
       </div>
-      <ul class="header2__collections-nav">
+      <ul class="header1__collections-nav">
         {%- if section.settings.menu_two != blank -%}
           {%- for link in section.settings.menu_two.links -%}
             {%- if link.links == blank -%}
-              <li class="header2__collection-link">
+              <li class="header1__collection-link">
                 <a href={{ link.url }}>{{ link.title | escape }} </a>
               </li>
             {%- else -%}
-              <li class="header2__collection-link">
+              <li class="header1__collection-link">
                 <a href={{ link.url }}>{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
                 <ul class="collection-link-sub-links">
                   {%- for childlink in link.links -%}
@@ -57,7 +58,7 @@
             {%- endif -%}
           {%- endfor -%}
         {%- endif -%}
-        <div class="header2__icons">
+        <div class="header1__icons">
           <a href="{{ routes.cart_url }}">
             <i class="fas fa-shopping-cart"></i>
           </a>
@@ -70,6 +71,7 @@
       </ul>
     </header>
   {% when 'header2' %}
+  {{ 'Header2.css' | asset_url | stylesheet_tag }}
     <header class="header header2">
       <div class="header2__logo">
         <a href="{{ routes.root_url }}">
@@ -140,8 +142,9 @@
       </ul>
     </header>
   {% when 'header3' %}
-    <header class="header header2">
-       <div class="header2__logo">
+  {{ 'Header3.css' | asset_url | stylesheet_tag }}
+    <header class="header header3">
+       <div class="header3__logo">
         <a href="{{ routes.root_url }}">
            {%- if section.settings.logo != blank -%}
             {%- assign image_size = section.settings.logo_width | append: 'x' -%}
@@ -158,15 +161,15 @@
           {%- endif -%}
         </a>
       </div>
-      <ul class="header2__collections-nav">
+      <ul class="header3__collections-nav">
         {%- if section.settings.menu != blank -%}
           {%- for link in section.settings.menu.links -%}
             {%- if link.links == blank -%}
-              <li class="header2__collection-link">
+              <li class="header3__collection-link">
                 <a href={{ link.url }}>{{ link.title | escape }} </a>
               </li>
             {%- else -%}
-              <li class="header2__collection-link">
+              <li class="header3__collection-link">
                 <a href={{ link.url }}>{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
                 <ul class="collection-link-sub-links">
                   {%- for childlink in link.links -%}
@@ -177,7 +180,7 @@
             {%- endif -%}
           {%- endfor -%}
         {%- endif -%}
-        <div class="header2__icons">
+        <div class="header3__icons">
           <a href="{{ routes.cart_url }}">
             <i class="fas fa-shopping-cart"></i>
           </a>

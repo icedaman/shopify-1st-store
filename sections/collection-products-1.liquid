@@ -1,3 +1,4 @@
+{{ 'Collection1.css' | asset_url | stylesheet_tag }}
 {% assign opacity0 = section.settings.container_opacity | divided_by: 100.00 %}
 <div class="collection collection1" style="background-color: {{ section.settings.container_background_color | color_modify: 'alpha', opacity0 }}">
   <div class="container">

@@ -114,7 +114,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet" />
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
-    {{ 'styles.css' | asset_url | stylesheet_tag }}
+    {{ 'vendors.css' | asset_url | stylesheet_tag }}
+    
+    {% style %}
+      // variables
+      :root{
+        --body-bg: {{settings.body_bg}}
+      }
+
+      body{
+        background-color: #f7f9fd;
+        a{
+          &:hover{
+            color: rgb(248,76,76);
+          }
+        }
+      }
+
+      .fixed-nav{
+        &.transparent-nav{
+          .header{
+            background: transparent;
+            a{
+              color: #fff;
+              font-size: 20px;
+              &:hover{
+                color: red;
+              }
+            }
+            .header1__collection-link, .header2__collection-link, .header3__collection-link{
+              .collection-link-sub-links{
+                a{
+                  color:#000;
+                  &:hover{
+                    color: red;
+                  }
+                }
+              }
+            }
+            // a:hover{
+            //   color: rgb(248,76,76);
+            // }
+          }
+        }
+        .header{
+          position: fixed;
+          width: 100%;
+          z-index: 20;
+        }
+      }
+    {% endstyle %}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
