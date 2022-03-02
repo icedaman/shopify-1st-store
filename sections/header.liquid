@@ -1,13 +1,13 @@
 {% case section.settings.header_type %}
   {% when 'header1' %}
   {{ 'Header1.css' | asset_url | stylesheet_tag }}
-    <header class="header header1" style="color:azure;background-color: #000;min-height: 100px;padding: 0; margin: 0 auto;">
+    <header class="header header1" >
       <ul class="header1__collections-nav">
         {%- if section.settings.menu != blank -%}
           {%- for link in section.settings.menu.links -%}
             {%- if link.links == blank -%}
               <li class="header1__collection-link">
-                <a href={{ link.url }}>{{ link.title | escape }}</a>
+                <a href={{ link.url }}>{{ link.title | escape }}</a> 
               </li>
             {%- else -%}
              <li class="header1__collection-link">
@@ -66,7 +66,7 @@
             <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
               <i class="fas fa-user"></i>
             </a>
-          {%- endif -%}  
+          {%- endif -%}
         </div>
       </ul>
     </header>
@@ -193,6 +193,68 @@
       </ul>
     </header>
 {% endcase %}
+
+{% comment %}
+<script>
+  // header animation
+
+  const bodyTag = document.getElementsByTagName('body')[0];
+  const headerWrapper = document.getElementById('shopify-section-header');
+  
+  if(bodyTag.classList.contains("fixed-nav") && bodyTag.classList.contains("transparent-nav")){
+    headerWrapper.style.position = 'fixed';
+    headerWrapper.style.width = '100%';
+    headerWrapper.style.top = '0';
+    headerWrapper.style.left = '0';
+    headerWrapper.style.zIndex = '7';
+  }
+
+  const onScroll = () => {
+    const scrollLocation = document.documentElement.scrollTop;
+
+    if(scrollLocation > 50){
+      bodyTag.classList.remove('transparent-nav');
+    }else{
+      bodyTag.classList.add('transparent-nav');
+    }     
+  }
+  
+  window.addEventListener('scroll', onScroll);
+
+</script>
+{% endcomment %}
+
+<script src="{{ 'zepto.min.js' | asset_url }}"></script>
+
+<script>
+  // header animation
+
+  const bodyTag = $('body');
+  const headerWrapper = $('#shopify-section-header');
+  
+  if(bodyTag.hasClass('fixed-nav')){
+    headerWrapper.css('position', 'fixed');
+    headerWrapper.css('width', '100%');
+    headerWrapper.css('top', '0');
+    headerWrapper.css('left', '0');
+    headerWrapper.css('z-index', '7');
+  }
+
+  if(bodyTag.hasClass('transparent-nav')){
+    const onScroll = () => {
+      const scrollLocation = document.documentElement.scrollTop;
+
+      if(scrollLocation > 5){
+        bodyTag.removeClass('transparent-nav');
+      }else{
+        bodyTag.addClass('transparent-nav');
+      }     
+    }
+    window.addEventListener('scroll', onScroll);
+  }
+  
+  
+</script>
 
 {% schema %}
 {

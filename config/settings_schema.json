@@ -12,6 +12,55 @@
     "settings": [
       {
         "type": "header",
+        "content": "Global Website Color"
+      },
+      {
+        "type": "color",
+        "id": "global_background_color",
+        "default": "#FFFFFF",
+        "label": "Background Color",
+        "info": "Choose the background color for the whole Website"
+      }
+    ]
+  },
+  {
+    "name": "Header Settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Header Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "header_sticky",
+        "label": "Stick Header to the Top of the page",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "header_transparent",
+        "label": "Header Transparent",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "header_background_color",
+        "label": "Header Background Color",
+        "default": "#783c3c" 
+      },
+      {
+        "type": "color",
+        "id": "header_text_color",
+        "label": "Header Text Color",
+        "default": "#1b1b1b"
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.colors.name",
+    "settings": [
+      {
+        "type": "header",
         "content": "t:settings_schema.colors.settings.header__1.content"
       },
       {

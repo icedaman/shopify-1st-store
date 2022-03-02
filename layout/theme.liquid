@@ -115,56 +115,72 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'vendors.css' | asset_url | stylesheet_tag }}
-    
+
     {% style %}
-      // variables
-      :root{
-        --body-bg: {{settings.body_bg}}
-      }
 
-      body{
-        background-color: #f7f9fd;
-        a{
-          &:hover{
-            color: rgb(248,76,76);
-          }
-        }
+      :root {
+        --global-background-color: {{ settings.global_background_color }};
+        --logo-size: {{ settings.logo_with }};
+        --body-bg: #29cdcd;
       }
-
-      .fixed-nav{
-        &.transparent-nav{
-          .header{
-            background: transparent;
-            a{
-              color: #fff;
-              font-size: 20px;
-              &:hover{
-                color: red;
-              }
-            }
-            .header1__collection-link, .header2__collection-link, .header3__collection-link{
-              .collection-link-sub-links{
-                a{
-                  color:#000;
-                  &:hover{
-                    color: red;
-                  }
-                }
-              }
-            }
-            // a:hover{
-            //   color: rgb(248,76,76);
-            // }
-          }
-        }
-        .header{
-          position: fixed;
-          width: 100%;
-          z-index: 20;
-        }
+      body {
+        background-color: var(--global-background-color);
       }
+      body a:hover {
+        color: #f84c4c;
+      }
+      .fixed-nav.transparent-nav .header {
+        background: transparent;
+      }
+      .fixed-nav.transparent-nav .header a {
+        color: #fff;
+        font-size: 20px;
+      }
+      .fixed-nav.transparent-nav .header a:hover {
+        color: red;
+      }
+      .fixed-nav.transparent-nav
+        .header
+        .header1__collection-link
+        .collection-link-sub-links
+        a,
+      .fixed-nav.transparent-nav
+        .header
+        .header2__collection-link
+        .collection-link-sub-links
+        a,
+      .fixed-nav.transparent-nav
+        .header
+        .header3__collection-link
+        .collection-link-sub-links
+        a {
+        color: #000;
+      }
+      .fixed-nav.transparent-nav
+        .header
+        .header1__collection-link
+        .collection-link-sub-links
+        a:hover,
+      .fixed-nav.transparent-nav
+        .header
+        .header2__collection-link
+        .collection-link-sub-links
+        a:hover,
+      .fixed-nav.transparent-nav
+        .header
+        .header3__collection-link
+        .collection-link-sub-links
+        a:hover {
+        color: red;
+      }
+      .fixed-nav .header {
+        position: fixed;
+        width: 100%;
+        z-index: 20;
+      }
+    
     {% endstyle %}
-
+    
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
@@ -179,7 +195,7 @@
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
   </head>
 
-  <body class="fixed-nav transparent-nav"> 
+  <body class="{% if settings.header_sticky %}fixed-nav{% endif %} {% if settings.header_transparent %}transparent-nav{% endif %}"> 
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
