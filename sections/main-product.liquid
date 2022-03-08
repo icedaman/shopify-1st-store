@@ -522,6 +522,12 @@
   }
 </script>
 
+<script>
+  console.log('listar produto')
+  const product = JSON.parse('{{ product.title | json }}');
+  console.log(product);
+</script>
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",
